@@ -1,0 +1,35 @@
+/* Banco de dados */
+CREATE DATABASE pontos_turisticos
+GO
+
+/* Usar esse banco de dados */
+USE pontos_turisticos
+GO
+
+/* Tabela de Estados */
+CREATE TABLE estados(
+	est_id	  INT PRIMARY KEY IDENTITY,
+	est_nome  VARCHAR(40) NOT NULL,
+	est_sigla CHAR(2) NOT NULL
+)
+GO
+
+/* Tabela de Cidades */
+CREATE TABLE cidades(
+	cid_id     INT PRIMARY KEY IDENTITY,
+	cid_nome   VARCHAR(100) NOT NULL,
+	cid_est_fk INT NOT NULL
+)
+GO
+
+/* Tabela dos pontos turísticos  */
+CREATE TABLE pontosTuristicos(
+	pts_id          INT PRIMARY KEY IDENTITY,
+	pts_cid_fk      INT NOT NULL,
+	pts_est_fk      INT NOT NULL,
+	pts_nome        VARCHAR(60) NOT NULL,
+	pts_referencia  VARCHAR(60) NOT NULL,
+	pts_descricao   VARCHAR(200) NOT NULL,
+	pts_dataCriacao DATE NOT NULL
+)
+GO

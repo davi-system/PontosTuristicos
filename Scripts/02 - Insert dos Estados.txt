@@ -1,0 +1,32 @@
+/* Usar esse banco de dados */
+USE pontos_turisticos
+GO
+
+INSERT INTO estados VALUES('Acre', 'AC')
+INSERT INTO estados VALUES('Alagoas', 'AL')
+INSERT INTO estados VALUES('Amazonas', 'AM')
+INSERT INTO estados VALUES('Amapá', 'AP')
+INSERT INTO estados VALUES('Bahia', 'BA')
+INSERT INTO estados VALUES('Ceará', 'CE')
+INSERT INTO estados VALUES('Distrito Federal', 'DF')
+INSERT INTO estados VALUES('Espírito Santo', 'ES')
+INSERT INTO estados VALUES('Goiás', 'GO')
+INSERT INTO estados VALUES('Maranhão', 'MA')
+INSERT INTO estados VALUES('Minas Gerais', 'MG')
+INSERT INTO estados VALUES('Mato Grosso do Sul', 'MS')
+INSERT INTO estados VALUES('Mato Grosso', 'MT')
+INSERT INTO estados VALUES('Pará', 'PA')
+INSERT INTO estados VALUES('Paraíba', 'PB')
+INSERT INTO estados VALUES('Pernambuco', 'PE')
+INSERT INTO estados VALUES('Piauí', 'PI')
+INSERT INTO estados VALUES('Paraná', 'PR')
+INSERT INTO estados VALUES('Rio de Janeiro', 'RJ')
+INSERT INTO estados VALUES('Rio Grande do Norte', 'RN')
+INSERT INTO estados VALUES('Rondônia', 'RO')
+INSERT INTO estados VALUES('Roraima', 'RR')
+INSERT INTO estados VALUES('Rio Grande do Sul', 'RS')
+INSERT INTO estados VALUES('Santa Catarina', 'SC')
+INSERT INTO estados VALUES('Sergipe', 'SE')
+INSERT INTO estados VALUES('São Paulo', 'SP')
+INSERT INTO estados VALUES('Tocantins', 'TO')
+GO
