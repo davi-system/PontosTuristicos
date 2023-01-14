@@ -17,5 +17,10 @@ namespace PontosTuristicos.Controllers
         {
             return View("Add");
         }
+
+        public IActionResult View()
+        {
+            return View("View");
+        }
     }
 }

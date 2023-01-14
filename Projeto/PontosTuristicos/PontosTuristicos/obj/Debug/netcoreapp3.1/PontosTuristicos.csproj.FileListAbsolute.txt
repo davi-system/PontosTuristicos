@@ -109,3 +109,4 @@ D:\New Con Software\PontosTuristicos\Projeto\PontosTuristicos\PontosTuristicos\b
 D:\New Con Software\PontosTuristicos\Projeto\PontosTuristicos\PontosTuristicos\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\New Con Software\PontosTuristicos\Projeto\PontosTuristicos\PontosTuristicos\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\New Con Software\PontosTuristicos\Projeto\PontosTuristicos\PontosTuristicos\obj\Debug\netcoreapp3.1\Razor\Views\PontoTuristico\Add.cshtml.g.cs
+D:\New Con Software\PontosTuristicos\Projeto\PontosTuristicos\PontosTuristicos\obj\Debug\netcoreapp3.1\Razor\Views\PontoTuristico\View.cshtml.g.cs
