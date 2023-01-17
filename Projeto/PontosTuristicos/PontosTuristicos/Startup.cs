@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PontosTuristicos.Data;
+using PontosTuristicos.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +27,9 @@ namespace PontosTuristicos
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<EFContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("EFContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

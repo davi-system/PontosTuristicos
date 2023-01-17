@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace PontosTuristicos.Controllers
 {
-    public class PontoTuristicoController : Controller
-    {
+    public class PontosTuristicosController : Controller
+    {        
         public IActionResult Index()
         {
             return View();
@@ -15,12 +16,7 @@ namespace PontosTuristicos.Controllers
 
         public IActionResult Add()
         {
-            return View("Add");
-        }
-
-        public IActionResult View()
-        {
-            return View("View");
-        }
+            return View();
+        }       
     }
 }
