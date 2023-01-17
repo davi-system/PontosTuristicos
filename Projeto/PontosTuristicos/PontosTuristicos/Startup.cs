@@ -28,8 +28,8 @@ namespace PontosTuristicos
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<EFContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("EFContext")));
+            services.AddDbContext<PontosTuristicosContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("PontosTuristicosContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
