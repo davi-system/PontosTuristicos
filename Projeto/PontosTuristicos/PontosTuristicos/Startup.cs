@@ -56,7 +56,7 @@ namespace PontosTuristicos
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=PontoTuristicos}/{action=Index}/{id?}");
             });
         }
     }

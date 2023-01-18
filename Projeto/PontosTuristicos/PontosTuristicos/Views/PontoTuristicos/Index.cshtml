@@ -4,56 +4,29 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="modal-header">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <img style="width: 100%;" src="~/img/logo_ponto_turistico.png" />
+            </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Cidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Referencia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Referencia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+            <div style="text-align: right; margin-top: 70px;" class="col-md-6">
+                <a asp-action="Create" style="text-decoration: none; color: white;" class="btn btn-primary"><i class="bi bi-plus"></i> Cadastrar um ponto turístico</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-body">
+    @foreach (var item in Model)
+    {
+        <p><b>@Html.DisplayFor(modelItem => item.Nome)</b></p>
+        <p style="text-align: justify;">@Html.DisplayFor(modelItem => item.Descricao)</p>
+        <a asp-action="Details" asp-route-id="@item.Id" style="text-decoration: none; color: white;" class="btn btn-secondary"><i class="bi bi-eye"></i> Detalhes</a>
+        <a asp-action="Edit" asp-route-id="@item.Id" style="text-decoration: none; color: white;" class="btn btn-success"><i class="bi bi-pen"></i> Editar</a>
+        <a asp-action="Delete" asp-route-id="@item.Id" style="text-decoration: none; color: white;" class="btn btn-danger"><i class="bi bi-trash"></i> Excluir</a>
+        <br /><br />
+    }
+
+</div>

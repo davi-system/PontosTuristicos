@@ -1,51 +1,71 @@
 ﻿@model PontosTuristicos.Models.PontoTuristico
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Excluir Ponto Turístico";
 }
 
-<h1>Delete</h1>
+<div class="modal-header">
+    <h1>@ViewData["Title"]</h1>    
+</div>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>PontoTuristico</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Referencia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Referencia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+<div class="modal-body">
+    <div class="col-md-12">
+        <p style="font-size: 22px;">Tem certeza que deseja excluir esse cadastro?</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <img style="width: 50%;" src="~/img/logo_ponto_turistico.png" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label class="control-label">Nome</label>
+                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.Nome)" disabled />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">Estado</label>
+                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.Estado)" disabled />
+            </div>
+
+            <div class="col-md-10">
+                <label class="control-label">Cidade</label>
+                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.Cidade)" disabled />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label class="control-label">Referência</label>
+                <input type="text" class="form-control" value="@Html.DisplayFor(model => model.Referencia)" disabled />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <label class="control-label">Descrição</label>
+                <textarea class="form-control" disabled>@Html.DisplayFor(model => model.Descricao)</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer" style="border: none;">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <a asp-action="Index" style="text-decoration: none; color: white;" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Voltar</a>
+            </div>
+
+            <div class="col-md-6" style="text-align: right;">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="Id" />                    
+                    <input type="submit" value="Confirmar" class="btn btn-danger" />
+                </form>
+            </div>         
+        </div>
+    </div>
 </div>
