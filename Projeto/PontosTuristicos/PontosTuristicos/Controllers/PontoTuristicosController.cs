@@ -19,11 +19,18 @@ namespace PontosTuristicos.Controllers
             _context = context;
         }
 
-        // GET: PontoTuristicos
-        public async Task<IActionResult> Index()
+        // GET: PontoTuristicos        
+        public async Task<IActionResult> Index(string nomePontoTuristico)
         {
-            return View(await _context.PontoTuristico.ToListAsync());
-        }
+            var pontoTuristico = from p in _context.PontoTuristico select p;
+
+            if (!String.IsNullOrEmpty(nomePontoTuristico))
+            {
+                pontoTuristico = pontoTuristico.Where(s => s.Nome.Contains(nomePontoTuristico));
+            }
+
+            return View(await pontoTuristico.ToListAsync());
+        }        
 
         // GET: PontoTuristicos/Details/5
         public async Task<IActionResult> Details(int? id)
