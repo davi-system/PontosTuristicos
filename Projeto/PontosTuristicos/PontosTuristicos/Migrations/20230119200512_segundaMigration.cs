@@ -2,7 +2,7 @@
 
 namespace PontosTuristicos.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class segundaMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,11 +12,11 @@ namespace PontosTuristicos.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Cidade = table.Column<string>(nullable: true),
-                    Estado = table.Column<int>(nullable: false),
-                    Nome = table.Column<string>(nullable: true),
-                    Referencia = table.Column<string>(nullable: true),
-                    Descricao = table.Column<string>(nullable: true)
+                    Cidade = table.Column<string>(nullable: false),
+                    Estado = table.Column<string>(maxLength: 2, nullable: false),
+                    Nome = table.Column<string>(nullable: false),
+                    Referencia = table.Column<string>(nullable: false),
+                    Descricao = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

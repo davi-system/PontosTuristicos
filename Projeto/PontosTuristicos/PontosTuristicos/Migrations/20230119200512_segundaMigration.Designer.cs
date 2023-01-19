@@ -9,8 +9,8 @@ using PontosTuristicos.Data;
 namespace PontosTuristicos.Migrations
 {
     [DbContext(typeof(PontosTuristicosContext))]
-    [Migration("20230117011816_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230119200512_segundaMigration")]
+    partial class segundaMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,18 +28,24 @@ namespace PontosTuristicos.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Cidade")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Descricao")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Estado")
-                        .HasColumnType("int");
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(2)")
+                        .HasMaxLength(2);
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Referencia")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
